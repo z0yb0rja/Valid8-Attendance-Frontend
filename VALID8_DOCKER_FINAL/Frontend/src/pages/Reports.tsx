@@ -51,7 +51,7 @@ export const Reports: React.FC = () => {
   const [attendanceReport, setAttendanceReport] =
     useState<AttendanceReport | null>(null);
   const [selectedProgram, setSelectedProgram] = useState<number | "all">("all");
-  const [isLoading, setIsLoading] = useState(false);
+  const [_isLoading, setIsLoading] = useState(false);
   const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
 
   useEffect(() => {
