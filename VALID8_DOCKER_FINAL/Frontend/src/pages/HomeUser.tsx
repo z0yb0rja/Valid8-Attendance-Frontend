@@ -236,7 +236,7 @@ export const HomeUser: React.FC<HomeUserProps> = ({ role }) => {
           {" "}
           {/* Added paddingRight */}
           <div className="row row-cols-1 row-cols-md-2 row-cols-lg-3 row-cols-xl-4 g-4 justify-content-center">
-            {cards.map((card, index) => (
+            {cards.map((card: any, index: number) => (
               <div className="col" key={index}>
                 <Link to={card.link} className="text-decoration-none">
                   <div className="card h-100 shadow-sm border-0 hover-effect">
