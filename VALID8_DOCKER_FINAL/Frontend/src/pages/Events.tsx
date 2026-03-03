@@ -34,7 +34,8 @@ interface Program {
   name: string;
 }
 
-interface Event {
+// I-rename ang interface gikan sa "Event" ngadto sa "ApiEvent" para di mag-conflict sa global Event type
+interface ApiEvent {
   id: number;
   name: string;
   location: string;
@@ -43,7 +44,7 @@ interface Event {
   status: "upcoming" | "ongoing" | "completed" | "cancelled";
   departments?: Department[];
   programs?: Program[];
-  ssg_members?: SSGMember[]; // Use SSGMember instead of SSGProfile
+  ssg_members?: SSGMember[];
 }
 
 export const Events: React.FC<EventsProps> = ({ role }) => {
@@ -52,8 +53,9 @@ export const Events: React.FC<EventsProps> = ({ role }) => {
     "all" | "upcoming" | "ongoing" | "completed" | "cancelled"
   >("all");
   const [dropdownOpen, setDropdownOpen] = useState(false);
-  const [isMobile, setIsMobile] = useState(false);
-  const [events, setEvents] = useState<Event[]>([]);
+  const [, setIsMobile] = useState(false);
+  // Gamita ang ApiEvent type sa state
+  const [events, setEvents] = useState<ApiEvent[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
 
@@ -77,7 +79,8 @@ export const Events: React.FC<EventsProps> = ({ role }) => {
           fetchEventsByStatus("completed"),
           fetchEventsByStatus("cancelled"),
         ]);
-        setEvents([...upcoming, ...ongoing, ...completed, ...cancelled]);
+        // I-cast ang data para mag-match sa ApiEvent type
+        setEvents([...upcoming, ...ongoing, ...completed, ...cancelled] as ApiEvent[]);
       } catch (err) {
         setError("Failed to fetch events. Please try again later.");
         console.error("Error fetching events:", err);
@@ -108,7 +111,6 @@ export const Events: React.FC<EventsProps> = ({ role }) => {
     return programs.map((p) => p.name).join(", ") || "N/A";
   };
 
-  // Then update formatSSGMembers:
   const formatSSGMembers = (members: SSGMember[] = []) => {
     if (!members || members.length === 0) return "N/A";
 
