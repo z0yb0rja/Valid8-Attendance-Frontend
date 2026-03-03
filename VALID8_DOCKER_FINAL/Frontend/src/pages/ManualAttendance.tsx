@@ -190,7 +190,7 @@ export const ManualAttendance: React.FC<ManualAttendanceProps> = ({ role }) => {
         }),
       });
 
-      const result = await response.json();
+      const _result = await response.json();
       showMessage(`Time in recorded successfully for ${studentId}`, "success");
       setStudentId("");
       setNotes("");
@@ -218,7 +218,7 @@ export const ManualAttendance: React.FC<ManualAttendanceProps> = ({ role }) => {
         }
       );
 
-      const result = await response.json();
+      const _result = await response.json();
       showMessage(
         `Time out recorded successfully for ${studentDisplayId}`,
         "success"
