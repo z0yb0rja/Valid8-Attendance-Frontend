@@ -51,7 +51,7 @@ export const Reports: React.FC = () => {
   const [attendanceReport, setAttendanceReport] =
     useState<AttendanceReport | null>(null);
   const [selectedProgram, setSelectedProgram] = useState<number | "all">("all");
-  const [_isLoading, setIsLoading] = useState(false);
+  const [, setIsLoading] = useState(false);
   const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
 
   useEffect(() => {
@@ -251,7 +251,7 @@ export const Reports: React.FC = () => {
       ];
     } else {
       const program = attendanceReport.program_breakdown.find(
-        (p) => p.program === selectedProgram
+        (p) => p.program === String(selectedProgram)
       );
       if (!program) return [];
       return [
@@ -394,9 +394,6 @@ export const Reports: React.FC = () => {
                   key={event.id}
                   style={{
                     borderBottom: "1px solid #eee",
-                    "&:hover": {
-                      backgroundColor: "#f5f5f5",
-                    },
                   }}
                 >
                   <td style={{ padding: "12px 15px" }}>{event.name}</td>
@@ -631,7 +628,7 @@ export const Reports: React.FC = () => {
                     {selectedProgram === "all"
                       ? attendanceReport.total_participants
                       : attendanceReport.program_breakdown.find(
-                          (p) => p.program === selectedProgram
+                          (p) => p.program === String(selectedProgram)
                         )?.total || 0}
                   </span>
                 </div>
@@ -663,7 +660,7 @@ export const Reports: React.FC = () => {
                     {selectedProgram === "all"
                       ? attendanceReport.attendees
                       : attendanceReport.program_breakdown.find(
-                          (p) => p.program === selectedProgram
+                          (p) => p.program === String(selectedProgram)
                         )?.present || 0}
                   </span>
                 </div>
@@ -695,7 +692,7 @@ export const Reports: React.FC = () => {
                     {selectedProgram === "all"
                       ? attendanceReport.absentees
                       : attendanceReport.program_breakdown.find(
-                          (p) => p.program === selectedProgram
+                          (p) => p.program === String(selectedProgram)
                         )?.absent || 0}
                   </span>
                 </div>
@@ -729,7 +726,7 @@ export const Reports: React.FC = () => {
                       : (() => {
                           const program =
                             attendanceReport.program_breakdown.find(
-                              (p) => p.program === selectedProgram
+                              (p) => p.program === String(selectedProgram)
                             );
                           return program
                             ? `${Math.round(
