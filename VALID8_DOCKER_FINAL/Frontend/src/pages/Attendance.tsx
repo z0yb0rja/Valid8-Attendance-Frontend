@@ -53,11 +53,11 @@ export const Attendance: React.FC<AttendanceProps> = ({ role }) => {
   const [attendanceRecords, setAttendanceRecords] = useState<
     AttendanceRecord[]
   >([]);
-  const [events, setEvents] = useState<Event[]>([]);
+  const [, setEvents] = useState([]);
   const [scanning, setScanning] = useState<number | null>(null);
   const [scanType, setScanType] = useState<"timeIn" | "timeOut" | null>(null);
   const [showCamera, setShowCamera] = useState(false);
-  const [capturedImage, setCapturedImage] = useState<string | null>(null);
+  const [, setCapturedImage] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [resetAfterSubmit, setResetAfterSubmit] = useState(true);
