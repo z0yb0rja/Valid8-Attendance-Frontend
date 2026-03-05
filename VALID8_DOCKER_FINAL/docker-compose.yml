@@ -20,7 +20,7 @@ services:
     ports:
       - "8000:8000"
     environment:
-      - DATABASE_URL=postgresql://postgres:postgres@db:5432/fastapi_db
+      - DATABASE_URL=postgresql://postgres.wmhghfyzkbhscmcubnzh:Valid8Rizal2026@aws-1-ap-southeast-2.pooler.supabase.com:6543/postgres
     volumes:
       - ./backend:/app
     restart: unless-stopped
@@ -55,3 +55,5 @@ services:
 
 volumes:
   postgres_data:
+    external: true
+    name: valid8_docker_final_postgres_data
