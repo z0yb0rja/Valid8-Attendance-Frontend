@@ -48,7 +48,7 @@ export const AdminDashboard: React.FC = () => {
 
       <main
         className="flex-grow-1"
-        style={{ padding: "2rem 1rem 2rem 3rem", backgroundColor: "#f5f7fa" }}
+        style={{ padding: "2rem 1rem 2rem 3rem", backgroundColor: "#f5f7fa", marginLeft: "60px" }}
       >
         {/* Welcoming Description */}
         <div
@@ -137,7 +137,7 @@ export const AdminDashboard: React.FC = () => {
         
         @media (min-width: 992px) {
           .home-user-container {
-            margin-left: 5rem; /* Changed from 1.5rem to 4rem (approx 2 inches) */
+            margin-left: 0; /* Changed from 1.5rem to 4rem (approx 2 inches) */
           }
         }
       `}</style>
