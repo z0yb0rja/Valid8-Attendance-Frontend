@@ -1,16 +1,16 @@
 .create-user-page {
   font-family: Arial, sans-serif;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 20px;
-  margin-left: 150px;
+  min-height: 100vh;
+  background-color: #f5f7fa;
 }
 
 .create-user-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 30px 70px 30px 150px;
   background: #fff;
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  padding: 20px;
 }
 
 .create-user-header {
@@ -162,7 +162,7 @@
   background: #fff;
 }
 
-.radio-input:checked + .radio-custom {
+.radio-input:checked+.radio-custom {
   background: #007bff;
   border-color: #007bff;
 }
@@ -221,7 +221,9 @@
 }
 
 @keyframes spin {
-  to { transform: rotate(360deg); }
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 .sr-only {

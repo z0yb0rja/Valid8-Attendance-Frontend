@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { NavbarAdmin } from "../components/NavbarAdmin";
 import { Link, useNavigate } from "react-router-dom";
-import {} from "../css/CreateUsers.css";
+import { } from "../css/CreateUsers.css";
 
 // Updated to match backend API structure
 interface UserCreate {
@@ -364,7 +364,7 @@ export const CreateUsers: React.FC = () => {
   return (
     <div className="create-user-page">
       <NavbarAdmin />
-      <div className="create-user-container compact-form" style={{ marginLeft: "60px" }}>
+      <div className="create-user-container compact-form">
         <header className="create-user-header">
           <div className="header-content">
             <h2>Create New User</h2>
@@ -506,9 +506,8 @@ export const CreateUsers: React.FC = () => {
                 <div className="dropdown">
                   <button
                     type="button"
-                    className={`dropdown-btn compact-btn ${
-                      validationErrors.roles ? "input-error" : ""
-                    }`}
+                    className={`dropdown-btn compact-btn ${validationErrors.roles ? "input-error" : ""
+                      }`}
                     onClick={(e) => {
                       e.preventDefault();
                       setRoleDropdownOpen(!roleDropdownOpen);
@@ -608,9 +607,8 @@ export const CreateUsers: React.FC = () => {
                   <div className="dropdown">
                     <button
                       type="button"
-                      className={`dropdown-btn compact-btn ${
-                        validationErrors.department ? "input-error" : ""
-                      }`}
+                      className={`dropdown-btn compact-btn ${validationErrors.department ? "input-error" : ""
+                        }`}
                       onClick={(e) => {
                         e.preventDefault();
                         setDepartmentDropdownOpen(!departmentDropdownOpen);
@@ -657,9 +655,8 @@ export const CreateUsers: React.FC = () => {
                   <div className="dropdown">
                     <button
                       type="button"
-                      className={`dropdown-btn compact-btn ${
-                        validationErrors.program ? "input-error" : ""
-                      }`}
+                      className={`dropdown-btn compact-btn ${validationErrors.program ? "input-error" : ""
+                        }`}
                       onClick={(e) => {
                         e.preventDefault();
                         setProgramDropdownOpen(!programDropdownOpen);
@@ -669,8 +666,8 @@ export const CreateUsers: React.FC = () => {
                       {programId
                         ? programs.find((p) => p.id === programId)?.name
                         : departmentId
-                        ? "Select Program"
-                        : "Select Department First"}
+                          ? "Select Program"
+                          : "Select Department First"}
                       <span className="icon">
                         {programDropdownOpen ? "▲" : "▼"}
                       </span>
@@ -713,9 +710,8 @@ export const CreateUsers: React.FC = () => {
                   <div className="dropdown">
                     <button
                       type="button"
-                      className={`dropdown-btn compact-btn ${
-                        validationErrors.position ? "input-error" : ""
-                      }`}
+                      className={`dropdown-btn compact-btn ${validationErrors.position ? "input-error" : ""
+                        }`}
                       onClick={(e) => {
                         e.preventDefault();
                         setPositionDropdownOpen(!positionDropdownOpen);
