@@ -24,7 +24,6 @@ interface HomeUserProps {
 }
 
 export const HomeUser: React.FC<HomeUserProps> = ({ role }) => {
-  const storedUser = localStorage.getItem("user");
   
   console.log("Role:", role); // Debugging to check role
 
