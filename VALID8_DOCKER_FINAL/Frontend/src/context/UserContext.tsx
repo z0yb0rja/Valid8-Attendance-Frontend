@@ -16,10 +16,6 @@ export const UserProvider = ({ children }: { children: React.ReactNode }) => {
     setAvatarState(newAvatar);
   };
 
-  const getAvatarForUser = (userId: string) => {
-    return localStorage.getItem(`userAvatar_${userId}`);
-  };
-
   return (
     <UserContext.Provider
       value={{
