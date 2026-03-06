@@ -364,7 +364,7 @@ export const CreateUsers: React.FC = () => {
   return (
     <div className="create-user-page">
       <NavbarAdmin />
-      <div className="create-user-container compact-form">
+      <div className="create-user-container compact-form" style={{ marginLeft: "60px" }}>
         <header className="create-user-header">
           <div className="header-content">
             <h2>Create New User</h2>
