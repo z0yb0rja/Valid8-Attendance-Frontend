@@ -1,3 +1,4 @@
+import type { User } from './userApi';
 const BASE_URL = import.meta.env.VITE_API_URL || "http://localhost:3003";
 
 // Update your Event interface to match the backend
