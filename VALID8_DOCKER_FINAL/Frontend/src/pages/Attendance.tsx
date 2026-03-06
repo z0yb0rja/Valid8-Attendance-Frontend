@@ -5,7 +5,7 @@ import NavbarStudentSSGEventOrganizer from "../components/NavbarStudentSSGEventO
 import { NavbarSSG } from "../components/NavbarSSG";
 import search_logo from "../assets/images/search_logo.png";
 import "../css/Attendance.css";
-import { FaRegSmileBeam, FaCheckCircle, FaUserAlt } from "react-icons/fa";
+import { FaRegSmileBeam, FaUserAlt } from "react-icons/fa";
 import { FiClock, FiMapPin, FiCalendar, FiUser } from "react-icons/fi";
 import { IoMdCheckmarkCircleOutline } from "react-icons/io";
 
@@ -57,7 +57,7 @@ export const Attendance: React.FC<AttendanceProps> = ({ role }) => {
   const [scanning, setScanning] = useState<number | null>(null);
   const [scanType, setScanType] = useState<"timeIn" | "timeOut" | null>(null);
   const [showCamera, setShowCamera] = useState(false);
-  const [, setCapturedImage] = useState(null);
+  const [, setCapturedImage] = useState<string | null>(null);
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [resetAfterSubmit, setResetAfterSubmit] = useState(true);

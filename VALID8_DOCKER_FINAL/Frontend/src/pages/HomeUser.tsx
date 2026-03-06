@@ -16,7 +16,6 @@ import {
   FaPlus,
   FaCogs,
   FaChartBar,
-  FaFileAlt,
   FaUserShield,
 } from "react-icons/fa";
 
@@ -26,8 +25,7 @@ interface HomeUserProps {
 
 export const HomeUser: React.FC<HomeUserProps> = ({ role }) => {
   const storedUser = localStorage.getItem("user");
-  const user = storedUser ? JSON.parse(storedUser) : null;
-
+  
   console.log("Role:", role); // Debugging to check role
 
   // Define card data with colorful icons
@@ -185,7 +183,7 @@ export const HomeUser: React.FC<HomeUserProps> = ({ role }) => {
   };
 
   // Choose appropriate card set based on role
-  const cards = cardData[role] || cardData.student;
+  const cards = cardData[role as keyof typeof cardData] || cardData.student;
 
   return (
     <div
