@@ -5,23 +5,25 @@
 }
 
 .create-user-container {
-  max-width: 1200px;
+  max-width: 900px;
   margin: 0 auto;
-  padding: 30px 70px 30px 150px;
+  padding: 40px;
   background: #fff;
   border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
 }
 
 .create-user-header {
-  margin-bottom: 20px;
-  padding-bottom: 10px;
-  border-bottom: 1px solid #eee;
+  margin-bottom: 30px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #eaeaea;
 }
 
 .create-user-header h2 {
   margin: 0;
   color: #333;
+  font-size: 28px;
+  font-weight: 500;
 }
 
 .alert {
@@ -43,20 +45,23 @@
 }
 
 .form-section {
-  margin-bottom: 25px;
-  padding: 15px;
-  background: #f9f9f9;
-  border-radius: 5px;
+  margin-bottom: 30px;
+  padding: 25px;
+  background: #fafafa;
+  border: 1px solid #f0f0f0;
+  border-radius: 8px;
 }
 
 .section-title {
   margin-top: 0;
-  margin-bottom: 15px;
+  margin-bottom: 20px;
   color: #444;
+  font-size: 22px;
+  font-weight: 500;
 }
 
 .form-group {
-  margin-bottom: 15px;
+  margin-bottom: 18px;
 }
 
 .form-group label {
