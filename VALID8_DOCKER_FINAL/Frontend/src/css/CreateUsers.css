@@ -8,13 +8,13 @@
 
 .create-user-container {
   max-width: 900px;
-  margin: 0 auto;
+  margin-left: auto;      /* ← ito ang kailangan */
+  margin-right: auto;     /* ← ito ang kailangan */
   padding: 40px;
   background: #fff;
   border-radius: 8px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
 }
-
 .create-user-header {
   margin-bottom: 30px;
   padding-bottom: 20px;
